@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta charset="UTF-8" name="package-mapping" content="x:com.vaadin.javaone.samples.crud">
+ </head> 
+ <body> 
+  <vaadin-vertical-layout style-name="product-form" spacing id="product-form" size-full> 
+   <vaadin-text-field caption="Product name" width-full _id="productName"></vaadin-text-field> 
+   <vaadin-horizontal-layout spacing width-full> 
+    <vaadin-text-field caption="Price" width-full _id="price"></vaadin-text-field> 
+    <x-number-field caption="In Stock" width-full _id="stockCount"></x-number-field> 
+   </vaadin-horizontal-layout> 
+   <vaadin-combo-box caption="Availability" width-full _id="availability"></vaadin-combo-box> 
+   <x-category-field caption="Categories" width-full _id="category"></x-category-field> 
+   <vaadin-css-layout style-name="expander" :expand></vaadin-css-layout> 
+   <vaadin-button style-name="primary" _id="save">
+     Save 
+   </vaadin-button> 
+   <vaadin-button style-name="cancel" _id="cancel">
+     Cancel 
+   </vaadin-button> 
+   <vaadin-button style-name="danger" _id="delete">
+     Delete 
+   </vaadin-button> 
+  </vaadin-vertical-layout>  
+ </body>
+</html>
