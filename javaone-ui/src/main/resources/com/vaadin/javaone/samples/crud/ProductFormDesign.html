@@ -8,11 +8,15 @@
   <vaadin-vertical-layout style-name="product-form" spacing id="product-form" size-full> 
    <vaadin-text-field caption="Product name" width-full _id="productName"></vaadin-text-field> 
    <vaadin-horizontal-layout spacing width-full> 
-    <vaadin-text-field caption="Price" width-full _id="price"></vaadin-text-field> 
-    <x-number-field caption="In Stock" width-full _id="stockCount"></x-number-field> 
+    <vaadin-text-field caption="Price" null-representation="" width-full _id="price"></vaadin-text-field> 
+    <vaadin-text-field caption="In Stock" null-representation="" width-full _id="stockCount"></vaadin-text-field> 
    </vaadin-horizontal-layout> 
    <vaadin-combo-box caption="Availability" width-full _id="availability"></vaadin-combo-box> 
-   <x-category-field caption="Categories" width-full _id="category"></x-category-field> 
+   <vaadin-option-group caption="Categories" item-caption-mode="id" width-full _id="category"> 
+    <option>Option 1</option> 
+    <option>Option 2</option> 
+    <option>Option 3</option> 
+   </vaadin-option-group> 
    <vaadin-css-layout style-name="expander" :expand></vaadin-css-layout> 
    <vaadin-button style-name="primary" _id="save">
      Save 

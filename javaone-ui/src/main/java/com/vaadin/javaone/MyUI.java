@@ -1,5 +1,7 @@
 package com.vaadin.javaone;
 
+import java.util.Locale;
+
 import javax.servlet.annotation.WebServlet;
 
 import com.vaadin.javaone.samples.MainScreen;
@@ -36,7 +38,7 @@ public class MyUI extends UI {
     @Override
     protected void init(VaadinRequest vaadinRequest) {
         Responsive.makeResponsive(this);
-        setLocale(vaadinRequest.getLocale());
+        setLocale(new Locale("en", "US"));
         getPage().setTitle("My");
         if (!accessControl.isUserSignedIn()) {
             setContent(new LoginScreen(accessControl, new LoginListener() {

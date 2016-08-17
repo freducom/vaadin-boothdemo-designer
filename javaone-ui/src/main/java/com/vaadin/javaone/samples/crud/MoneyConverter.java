@@ -11,13 +11,13 @@ import com.vaadin.data.util.converter.StringToBigDecimalConverter;
  * A converter that adds/removes the euro sign and formats currencies with two
  * decimal places.
  */
-public class EuroConverter extends StringToBigDecimalConverter {
+public class MoneyConverter extends StringToBigDecimalConverter {
 
     @Override
     public BigDecimal convertToModel(String value,
             Class<? extends BigDecimal> targetType, Locale locale)
             throws com.vaadin.data.util.converter.Converter.ConversionException {
-        value = value.replaceAll("[€\\s]", "").trim();
+        value = value.replaceAll("[$\\s]", "").trim();
         if ("".equals(value)) {
             value = "0";
         }
@@ -39,6 +39,6 @@ public class EuroConverter extends StringToBigDecimalConverter {
     public String convertToPresentation(BigDecimal value,
             Class<? extends String> targetType, Locale locale)
             throws com.vaadin.data.util.converter.Converter.ConversionException {
-        return super.convertToPresentation(value, targetType, locale) + " €";
+        return "$" + super.convertToPresentation(value, targetType, locale);
     }
 }

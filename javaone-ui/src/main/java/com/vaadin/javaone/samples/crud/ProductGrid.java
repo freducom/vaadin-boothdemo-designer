@@ -82,7 +82,7 @@ public class ProductGrid extends Grid {
                 .setRenderer(new HtmlRenderer());
 
         // Add " €" automatically after price
-        getColumn("price").setConverter(new EuroConverter());
+        getColumn("price").setConverter(new MoneyConverter());
 
         // Show categories as a comma separated list
         getColumn("category").setConverter(new CollectionToStringConverter());
