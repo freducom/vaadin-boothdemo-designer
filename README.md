@@ -1,67 +1,52 @@
-javaone
-==============
+# Vaadin Expo booth example application
 
-Template for a full-blown Vaadin application that only requires a Servlet 3.0 container to run (no other JEE dependencies).
+This is a starting point for showing how Vaadin Designer works. Part 2 of the JavaOne booth pitch.
 
+## Before JavaOne
 
-Project Structure
-=================
+Clone this repository for yourself 
+```
+git clone git@gitlab.vaadin.com:fredu/vaadin-designer-javaone.git
+mvn install
+```
+Import the javaone-ui project (only) to your IDE.
 
-The project consists of the following three modules:
+## The Booth Pitch
 
-- parent project: common metadata and configuration
-- javaone-widgetset: widgetset, custom client side code and dependencies to widget add-ons
-- javaone-ui: main application module, development time
-- javaone-production: module that produces a production mode WAR for deployment
+Command prompt before starting: 
+```
+git reset --hard before next
+```
 
-The production mode module recompiles the widgetset (obfuscated, not draft), activates production mode for Vaadin with a context parameter in web.xml and contains a precompiled theme. The ui module WAR contains an unobfuscated widgetset, and is meant to be used at development time only.
+Start the server and show the project.
+```
+Debug as -> Maven build... -> Jetty:run
+```
 
-Workflow
-========
+> This is the standard example archetype for Vaadin Framework. 
 
-To compile the entire project, run "mvn install" in the parent project.
+Click around and show the form by selecting something in the grid.
 
-Other basic workflow steps:
+> Let's change the form a bit. The buttons could be made prettier and there are some things in the grid we want to edit as well.
 
-- getting started
-- compiling the whole project
-  - run "mvn install" in parent project
-- developing the application
-  - edit code in the ui module
-  - run "mvn jetty:run" in ui module
-  - open http://localhost:8080/
-- client side changes or add-ons
-  - edit code/POM in widgetset module
-  - run "mvn install" in widgetset module
-  - if a new add-on has an embedded theme, run "mvn vaadin:update-theme" in the ui module
-- debugging client side code
-  - run "mvn vaadin:run-codeserver" in widgetset module
-  - activate Super Dev Mode in the debug window of the application
-- creating a production mode war
-  - run "mvn -Pproduction package" in the production mode module or in the parent module
-- testing the production mode war
-  - run "mvn -Pproduction jetty:run-war" in the production mode module
+Open the design file in designer.
 
+> Drag 2 textfields and wrap them in a horisontal layout
 
-Developing a theme using the runtime compiler
--------------------------
+Name the Textfields price and stockCount and add a label.
 
-When developing the theme, Vaadin can be configured to compile the SASS based
-theme at runtime in the server. This way you can just modify the scss files in
-your IDE and reload the browser to see changes.
+Show the Wrap function in Designer.
 
-To use on the runtime compilation, open pom.xml of your UI project and comment 
-out the compile-theme goal from vaadin-maven-plugin configuration. To remove 
-an existing pre-compiled theme, remove the styles.css file in the theme directory.
+> Let's also make it nicer in a UX sense.
 
-When using the runtime compiler, running the application in the "run" mode 
-(rather than in "debug" mode) can speed up consecutive theme compilations
-significantly.
+Click expand-arrow in layout + 2 textfields.
 
-The production module always automatically precompiles the theme for the production WAR.
+Add spacing for the horisontal layout (checkbox).
 
-Using Vaadin pre-releases
--------------------------
+> Let's also change the styling of the buttons.
 
-If Vaadin pre-releases are not enabled by default, use the Maven parameter
-"-P vaadin-prerelease" or change the activation default value of the profile in pom.xml .
+Save: primary
+Delete: danger
+
+Show the design on mobile.
+Show the entire app on mobile (change the port to 8080).
