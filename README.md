@@ -50,3 +50,9 @@ Delete: danger
 
 Show the design on mobile.
 Show the entire app on mobile (change the port to 8080).
+
+> One more thing. There are tons of add-ons in Vaadin, 600 in fact, and they're very easy to take into use. Let's look at the Spreadsheet component
+
+Open the StatsView class
+
+Check out the Stats view and comment out the code. Show how the Stats.xlsx content is now in a spreadsheet and editable. 

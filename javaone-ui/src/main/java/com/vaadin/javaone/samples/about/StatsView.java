@@ -21,15 +21,19 @@ public class StatsView extends VerticalLayout implements View {
 
     public StatsView() {
 
-        Spreadsheet externalStats = null;
-		try {
-			externalStats = new Spreadsheet(getClass().getResourceAsStream("/Stats.xlsx"));
-		} catch (IOException e) {
-			// IMPOSSIBLE I TELL YOU!! :)
-			e.printStackTrace();
-		}
-		externalStats.setSizeFull();
-        addComponent(externalStats);
+    	/**
+    	 * Uncomment the following to show how to add a spreadsheet with charts to your app
+    	 */
+    	
+//        Spreadsheet externalStats = null;
+//		try {
+//			externalStats = new Spreadsheet(getClass().getResourceAsStream("/Stats.xlsx"));
+//		} catch (IOException e) {
+//			// IMPOSSIBLE I TELL YOU!! :)
+//			e.printStackTrace();
+//		}
+//		externalStats.setSizeFull();
+//        addComponent(externalStats);
         
         setSizeFull();
         setStyleName("about-view");
