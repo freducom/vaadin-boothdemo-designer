@@ -15,7 +15,7 @@ Import the javaone-ui project (only) to your IDE.
 
 Command prompt before starting: 
 ```
-git reset --hard before next
+git reset --hard
 ```
 
 Start the server and show the project.
