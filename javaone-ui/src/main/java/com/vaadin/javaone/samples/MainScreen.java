@@ -1,7 +1,7 @@
 package com.vaadin.javaone.samples;
 
 import com.vaadin.javaone.MyUI;
-import com.vaadin.javaone.samples.about.AboutView;
+import com.vaadin.javaone.samples.about.StatsView;
 import com.vaadin.javaone.samples.crud.SampleCrudView;
 
 import com.vaadin.navigator.Navigator;
@@ -31,7 +31,7 @@ public class MainScreen extends HorizontalLayout {
         menu = new Menu(navigator);
         menu.addView(new SampleCrudView(), SampleCrudView.VIEW_NAME,
                 SampleCrudView.VIEW_NAME, FontAwesome.EDIT);
-        menu.addView(new AboutView(), AboutView.VIEW_NAME, AboutView.VIEW_NAME,
+        menu.addView(new StatsView(), StatsView.VIEW_NAME, StatsView.VIEW_NAME,
                 FontAwesome.INFO_CIRCLE);
 
         navigator.addViewChangeListener(viewChangeListener);
