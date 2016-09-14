@@ -2,18 +2,9 @@
 
 This is a starting point for showing how Vaadin Designer works. Part 2 of the JavaOne booth pitch.
 
-## Before JavaOne
+## The Booth Demo
 
-Clone this repository for yourself 
-```
-git clone git@gitlab.vaadin.com:fredu/vaadin-designer-javaone.git
-mvn install
-```
-Import the javaone-ui project (only) to your IDE.
-
-## The Booth Pitch
-
-Command prompt before starting: 
+Always be safe and reset first: 
 ```
 git reset --hard
 ```
@@ -29,9 +20,9 @@ Click around and show the form by selecting something in the grid.
 
 > Let's change the form a bit. The buttons could be made prettier and there are some things in the grid we want to edit as well.
 
-Open the design file in designer.
+Open the design file in designer. Ask if the person would like to use it themselves!
 
-> Drag 2 textfields and wrap them in a horisontal layout
+> Please drag 2 textfields and wrap them in a horisontal layout
 
 Name the Textfields price and stockCount and add a label.
 
@@ -51,7 +42,7 @@ Delete: danger
 Show the design on mobile.
 Show the entire app on mobile (change the port to 8080).
 
-> One more thing. There are tons of add-ons in Vaadin, 600 in fact, and they're very easy to take into use. Let's look at the Spreadsheet component
+> One more thing. There are tons of add-ons in Vaadin, more than 600 in fact, and they're very easy to take into use. Let's look at the Spreadsheet component
 
 Open the StatsView class
 
